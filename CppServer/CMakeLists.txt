@@ -7,7 +7,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(CTest)
 enable_testing()
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME}
+    main.cpp
+    functions.hpp functions.cpp
+    Server.hpp
+)
 
 target_precompile_headers(${PROJECT_NAME} PRIVATE pch.hpp)
 
